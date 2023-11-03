@@ -1,8 +1,35 @@
 import React from 'react';
 
 function App() {
-  const value = 'World';
-  return <div>Hello {value}</div>;
+  const [inputValue, setInputValue] = React.useState("");
+  const [cursorPosition, setCursorPosition] = React.useState(0);
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleInputFocus = (event) => {
+    setCursorPosition(event.target.selectionStart);
+  };
+
+  return (
+    <div>
+      <h1>Computer vision</h1>
+      <form>
+        <label htmlFor="prompt">Insert URI, or type prompt:</label>
+        <input
+          type="text"
+          name="prompt"
+          placeholder="Enter URL or textual prompt to generate an image"
+          value={inputValue}
+          onChange={handleInputChange}
+          onFocus={handleInputFocus}
+        />
+        <button type="button">Analice</button>
+        <button type="button">Generate</button>
+      </form>
+    </div>
+  );
 }
 
 export default App;
