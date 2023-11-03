@@ -25,8 +25,10 @@ function App() {
           onChange={handleInputChange}
           //onFocus={handleInputFocus}
         />
-        <button type="button">Analice</button>
-        <button type="button">Generate</button>
+        <div>
+          <button type="button">Analice</button>
+          <button type="button">Generate</button>
+        </div>
       </form>
     </div>
   );
