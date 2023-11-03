@@ -16,7 +16,9 @@ function App() {
     <div>
       <h1>Computer vision</h1>
       <form>
-        <label htmlFor="prompt">Insert URI, or type prompt:</label>
+        <p>
+          <label htmlFor="prompt">Insert URI, or type prompt:</label>
+        </p>
         <input
           type="text"
           name="prompt"
