@@ -2,15 +2,15 @@ import React from 'react';
 
 function App() {
   const [inputValue, setInputValue] = React.useState("");
-  const [cursorPosition, setCursorPosition] = React.useState(0);
+  //const [cursorPosition, setCursorPosition] = React.useState(0);
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
 
-  const handleInputFocus = (event) => {
-    setCursorPosition(event.target.selectionStart);
-  };
+  // const handleInputFocus = (event) => {
+  //   setCursorPosition(event.target.selectionStart);
+  // };
 
   return (
     <div>
@@ -23,7 +23,7 @@ function App() {
           placeholder="Enter URL or textual prompt to generate an image"
           value={inputValue}
           onChange={handleInputChange}
-          onFocus={handleInputFocus}
+          //onFocus={handleInputFocus}
         />
         <button type="button">Analice</button>
         <button type="button">Generate</button>
